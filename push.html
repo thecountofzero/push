@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>History PushState</title>
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div>
+		<ul>
+			<li><a href='canjs'>CanJS</a></li>
+			<li><a href='donejs'>DoneJS</a></li>
+			<li><a href='bitovi'>Bitovi</a></li>
+			<li><a href='player/ryanbraun'>Ryan Braun</a></li>
+		</ul>
+	</div>
+	<script type='text/javascript' src='../steal/steal.js'></script>
+
+	<script type='text/javascript'>
+		
+		steal('can/route/pushstate', function($) {
+
+		    can.route(':js');
+		    can.route(':thing/:id');
+		    can.route('', {js: 'bitovi'});
+
+			$(document).ready(function() {
+				
+			});
+		});
+	</script>
+</body>
+</html>
